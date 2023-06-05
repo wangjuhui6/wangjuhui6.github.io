@@ -1,0 +1,1 @@
+import{d as s,c as t,F as u,r as c,u as l,o as n,t as p,a as i,b as _}from"./index-79df1d55.js";const m=["onClick"],g=s({__name:"HomeView",setup(f){const r=_();function a(o){r.push(o.path)}return(o,d)=>(n(),t("ul",null,[(n(!0),t(u,null,c(l(i).getRoutes(),e=>(n(),t("li",{key:e.name,onClick:k=>a(e)},p(e.meta.name)+" ",9,m))),128))]))}});export{g as default};
