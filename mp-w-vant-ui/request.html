@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>request | @wjh666/mp-w-vant-ui</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="小程序ui组件库">
+    
+    <link rel="preload" href="/mp-w-vant-ui/assets/css/0.styles.f6799853.css" as="style"><link rel="preload" href="/mp-w-vant-ui/assets/js/app.3efa9c43.js" as="script"><link rel="preload" href="/mp-w-vant-ui/assets/js/2.f34805be.js" as="script"><link rel="preload" href="/mp-w-vant-ui/assets/js/10.b44f200a.js" as="script"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/11.fcb75e19.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/12.4cdba1ce.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/3.764e7dde.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/4.9eb53496.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/5.62cdf695.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/6.741cea00.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/7.d34d8cb4.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/8.8f0f7114.js"><link rel="prefetch" href="/mp-w-vant-ui/assets/js/9.e82d467a.js">
+    <link rel="stylesheet" href="/mp-w-vant-ui/assets/css/0.styles.f6799853.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/mp-w-vant-ui/" class="home-link router-link-active"><!----> <span class="site-name">@wjh666/mp-w-vant-ui</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/mp-w-vant-ui/" class="nav-link">
+  mp-w-vant-ui
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/mp-w-vant-ui/" class="nav-link">
+  mp-w-vant-ui
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/mp-w-vant-ui/" aria-current="page" class="sidebar-link">@wjh666/mp-w-vant-ui</a></li><li><a href="/mp-w-vant-ui/list.html" class="sidebar-link">list</a></li><li><a href="/mp-w-vant-ui/form.html" class="sidebar-link">form</a></li><li><a href="/mp-w-vant-ui/sku.html" class="sidebar-link">sku</a></li><li><a href="/mp-w-vant-ui/scroll-view.html" class="sidebar-link">scroll-view</a></li><li><a href="/mp-w-vant-ui/request.html" aria-current="page" class="active sidebar-link">request</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/mp-w-vant-ui/request.html#示例" class="sidebar-link">示例</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="request"><a href="#request" class="header-anchor">#</a> request</h1> <h2 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Request <span class="token keyword">from</span> <span class="token string">'@wjh666/mp-w-vant-ui/request.js'</span>
+
+<span class="token keyword">const</span> axios <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Request</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 基础配置</span>
+axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">baseUrl</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">header</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">'content-type'</span><span class="token operator">:</span> <span class="token string">'application/json'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">timeout</span><span class="token operator">:</span> <span class="token number">60000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 请求拦截</span>
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>request<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 请求前对数据进行更改 如更改请求头 更改请求参数</span>
+  <span class="token keyword">return</span> e
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 请求失败 如404 等请求错误</span>
+  <span class="token keyword">return</span> e
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 相应拦截</span>
+axios<span class="token punctuation">.</span>interceptors<span class="token punctuation">.</span>response<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 处理接口响应</span>
+  <span class="token comment">// 如某些状态码，退出登录之类的操作</span>
+  <span class="token comment">// 也可以讲请求成功的数据进行简化，如去掉请求响应头之类的操作</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'请求成功'</span><span class="token punctuation">)</span>
+  <span class="token comment">// 登录过期等操作，中断其他接口请求</span>
+  <span class="token comment">// axios.abort()</span>
+  <span class="token keyword">return</span> e<span class="token punctuation">.</span>data
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'请求失败'</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> e
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/mp-w-vant-ui/scroll-view.html" class="prev">
+        scroll-view
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/mp-w-vant-ui/assets/js/app.3efa9c43.js" defer></script><script src="/mp-w-vant-ui/assets/js/2.f34805be.js" defer></script><script src="/mp-w-vant-ui/assets/js/10.b44f200a.js" defer></script>
+  </body>
+</html>
